@@ -1,4 +1,0 @@
-package cards;
-
-interface CardOption {
-}
