@@ -2,8 +2,8 @@ package Skipasses;
 
 public class DayCard extends Card {
 
-    int days;
-    int last_check;
+    private int days;
+    private int last_check;
     DayCard(CardOption opt){
         this.extend(opt);
     }

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class CardSystem {
 
-    List<Card> cards;
+    private List<Card> cards;
     public CardSystem(){
         this.cards = new ArrayList<Card>();
     }
@@ -16,10 +16,16 @@ public class CardSystem {
 
     public Card getNewRideCard(RideCardOption opt, String weekday_type){
         RideCard c = new RideCard(opt);
-        if(weekday_type == "weekday"){
-            return new WeekdayCardDecorator(c);
-        }else if(weekday_type == "weekend"){
-            return new WeekendCardDecorator(c);
+        Card result = null;
+        if(weekday_type.equals("weekday")){
+            result = new WeekdayCardDecorator(c);
+        }else if(weekday_type.equals("weekend")){
+            result = new WeekendCardDecorator(c);
+        }
+
+        if(result != null) {
+            this.cards.add(result);
+            return result;
         }
         return null;
     }

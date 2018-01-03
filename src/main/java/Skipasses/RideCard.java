@@ -2,12 +2,12 @@ package Skipasses;
 
 public class RideCard extends Card {
 
-    int rides;
+    private int rides;
     RideCard(RideCardOption opt){
         extend(opt);
     }
 
-    public Boolean is_valid(){
+    Boolean is_valid(){
         if(this.isBanned) return false;
         if(this.rides <= 0){
             this.isBanned = true;

@@ -2,7 +2,7 @@ package Skipasses;
 
 public class Turnstile {
 
-    CardSystem system;
+    private CardSystem system;
     public Turnstile(){
 
     }

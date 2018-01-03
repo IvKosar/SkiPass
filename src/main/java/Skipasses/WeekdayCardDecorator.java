@@ -2,7 +2,7 @@ package Skipasses;
 
 public class WeekdayCardDecorator extends Card {
 
-    Card card;
+    private Card card;
     WeekdayCardDecorator(Card card){
         this.card = card;
     }
