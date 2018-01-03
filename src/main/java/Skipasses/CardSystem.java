@@ -14,7 +14,21 @@ public class CardSystem {
         this.cards.add(card);
     }
 
-    void getNewRideCard(RideCardOption opt, String weekday_type){
+    public Card getNewRideCard(RideCardOption opt, String weekday_type){
         RideCard c = new RideCard(opt);
+        if(weekday_type == "weekday"){
+            return new WeekdayCardDecorator(c);
+        }else if(weekday_type == "weekend"){
+            return new WeekendCardDecorator(c);
+        }
+        return null;
+    }
+
+    public Card getNewDayCard(WeekdayDayCardOption opt){
+        return new WeekdayCardDecorator(new DayCard(opt));
+    }
+
+    public Card getNewDayCard(WeekendDayCardOption opt){
+        return new WeekendCardDecorator(new DayCard(opt));
     }
 }

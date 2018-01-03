@@ -1,0 +1,4 @@
+package Skipasses;
+
+interface CardOption {
+}

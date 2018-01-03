@@ -1,6 +1,6 @@
 package Skipasses;
 
-public enum WeekendDayCardOption {
+public enum WeekendDayCardOption implements CardOption{
     ONE("1"), TWO("2");
 
     String days;

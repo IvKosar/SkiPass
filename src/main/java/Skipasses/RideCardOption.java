@@ -1,6 +1,6 @@
 package Skipasses;
 
-public enum RideCardOption {
+public enum RideCardOption implements CardOption{
     TEN("10"), TWENTY("20"), FIFTY("50"), HUNDRED("100");
 
     String rides;
