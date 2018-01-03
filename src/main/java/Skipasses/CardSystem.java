@@ -15,6 +15,6 @@ public class CardSystem {
     }
 
     void getNewRideCard(RideCardOption opt, String weekday_type){
-        RideCard c = new RideCard();
+        RideCard c = new RideCard(opt);
     }
 }
