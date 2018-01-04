@@ -1,18 +1,21 @@
 import Skipasses.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         CardSystem cs = new CardSystem();
         Turnstile t1 = new Turnstile(cs);
         Turnstile t2 = new Turnstile();
         t2.connect_to(cs);
 
 //        Card test1 = new DayCard(WeekdayDayCardOption.ONE);
+//        Card test2 = new RideCard(RideCardOption.TEN);
 
         Card c1 = cs.getNewCard(WeekdayDayCardOption.FIVE);
+
+        /* RideCard test
         Card c2 = cs.getNewCard(RideCardOption.TEN,"weekday");
 
-//        Card c3 = new RideCard(RideCardOption.TEN);
+
         for(int i=0;i<11;i++) {
             System.out.println(t1.useCard(c2));
         }
@@ -24,5 +27,10 @@ public class Main {
         for(int i=0;i<11;i++) {
             System.out.println(t1.useCard(c2));
         }
+        */
+
+        System.out.println(Timer.dayOfWeek(Timer.date()));
+
+
     }
 }

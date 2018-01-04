@@ -1,18 +1,19 @@
 package Skipasses;
 
-import java.util.Calendar;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 public class Timer {
 
-    static int dayOfWeek(int year, int month, int day){
-        Calendar c1 = Calendar.getInstance();
-        c1.set(year, month-1,day);
-
-        int weekday = c1.get(Calendar.DAY_OF_WEEK);
-        return weekday;
+    public static String dayOfWeek(String date) throws Exception{
+        SimpleDateFormat format1=new SimpleDateFormat("yyyy-MM-dd");
+        Date dt1 = format1.parse(date);
+        return dt1.toString().substring(0, 3);
     }
 
-    static String date(){
-        return null;
+    public static String date(){
+        String data = LocalDateTime.now().toString();
+        return data.substring(0,10);
     }
 }
