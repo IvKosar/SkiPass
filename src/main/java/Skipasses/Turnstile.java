@@ -16,6 +16,6 @@ public class Turnstile {
     }
 
     public Boolean useCard(Card card){
-        return true;
+        return card.useCard();
     }
 }

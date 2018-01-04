@@ -14,8 +14,8 @@ public class CardSystem {
         this.cards.add(card);
     }
 
-    public Card getNewRideCard(RideCardOption opt, String weekday_type){
-        RideCard c = new RideCard(opt);
+    public Card getNewCard(RideCardOption opt, String weekday_type){
+        RideCard c = new RideCard(this.cards.size(), opt);
         Card result = null;
         if(weekday_type.equals("weekday")){
             result = new WeekdayCardDecorator(c);
@@ -24,17 +24,21 @@ public class CardSystem {
         }
 
         if(result != null) {
-            this.cards.add(result);
+            this.add_card(result);
             return result;
         }
         return null;
     }
 
-    public Card getNewDayCard(WeekdayDayCardOption opt){
-        return new WeekdayCardDecorator(new DayCard(opt));
+    public Card getNewCard(WeekdayDayCardOption opt){
+        Card result = new WeekdayCardDecorator(new DayCard(this.cards.size(), opt));
+        this.add_card(result);
+        return result;
     }
 
-    public Card getNewDayCard(WeekendDayCardOption opt){
-        return new WeekendCardDecorator(new DayCard(opt));
+    public Card getNewCard(WeekendDayCardOption opt){
+        Card result = new WeekendCardDecorator(new DayCard(this.cards.size(), opt));
+        this.add_card(result);
+        return result;
     }
 }

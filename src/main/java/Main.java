@@ -9,21 +9,20 @@ public class Main {
 
 //        Card test1 = new DayCard(WeekdayDayCardOption.ONE);
 
-        Card c1 = cs.getNewDayCard(WeekdayDayCardOption.FIVE);
-        Card c2 = cs.getNewRideCard(RideCardOption.TEN,"weekday");
+        Card c1 = cs.getNewCard(WeekdayDayCardOption.FIVE);
+        Card c2 = cs.getNewCard(RideCardOption.TEN,"weekday");
 
 //        Card c3 = new RideCard(RideCardOption.TEN);
+        for(int i=0;i<11;i++) {
+            System.out.println(t1.useCard(c2));
+        }
 
-        System.out.println(t1.useCard(c2));
-        System.out.println(t1.useCard(c2));
-        System.out.println(t1.useCard(c2));
-        System.out.println(t1.useCard(c2));
 
         c2.extend(RideCardOption.TEN);
         System.out.println("Extended");
 
-        System.out.println(t1.useCard(c2));
-        System.out.println(t1.useCard(c2));
-
+        for(int i=0;i<11;i++) {
+            System.out.println(t1.useCard(c2));
+        }
     }
 }

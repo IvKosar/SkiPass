@@ -10,4 +10,8 @@ public class WeekendCardDecorator extends Card {
     public void extend(CardOption o){
         this.card.extend(o);
     }
+
+    Boolean useCard(){
+        return this.card.useCard();
+    }
 }
