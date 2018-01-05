@@ -1,7 +1,7 @@
 package Skipasses;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Timer {
@@ -18,7 +18,12 @@ public class Timer {
     }
 
     public static String date(){
-        String data = LocalDateTime.now().toString();
-        return data.substring(0,10);
+        return LocalDate.now().toString();
+
+    }
+
+    public static String futureDate(int days){
+        LocalDate d = LocalDate.now().plusDays(days);
+        return d.toString();
     }
 }

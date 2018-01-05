@@ -31,7 +31,7 @@ public class Main {
 
         Card weekTest1 = cs.getNewCard(WeekendDayCardOption.ONE);
         System.out.println(t1.useCard(weekTest1));
-
+        System.out.println(Timer.futureDate(5));
 
     }
 }
