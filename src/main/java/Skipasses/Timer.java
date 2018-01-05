@@ -12,7 +12,7 @@ public class Timer {
             Date dt1 = format1.parse(date);
             return dt1.toString().substring(0, 3);
         }catch (Exception e){
-            return null;
+            return "Error";
         }
 
     }
