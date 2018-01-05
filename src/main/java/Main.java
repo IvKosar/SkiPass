@@ -1,7 +1,7 @@
 import Skipasses.*;
 
 public class Main {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args){
         CardSystem cs = new CardSystem();
         Turnstile t1 = new Turnstile(cs);
         Turnstile t2 = new Turnstile();
@@ -29,7 +29,8 @@ public class Main {
         }
         */
 
-        System.out.println(Timer.dayOfWeek(Timer.date()));
+        Card weekTest1 = cs.getNewCard(WeekendDayCardOption.ONE);
+        System.out.println(t1.useCard(weekTest1));
 
 
     }

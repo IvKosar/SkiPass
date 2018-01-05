@@ -11,7 +11,15 @@ public class WeekdayCardDecorator extends Card {
         card.extend(o);
     }
 
+    private Boolean is_valid(){
+        String day = Timer.dayOfWeek(Timer.date());
+        return !(day.equals("Sat") | day.equals("Sun"));
+    }
+
     Boolean useCard(){
-        return this.card.useCard();
+        if(this.is_valid()) {
+            return this.card.useCard();
+        }
+        return false;
     }
 }

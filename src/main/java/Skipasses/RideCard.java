@@ -7,7 +7,7 @@ public class RideCard extends Card {
         extend(opt);
     }
 
-    Boolean is_valid(){
+    private Boolean is_valid(){
         if(this.checkBan()) return false;
         if(this.rides <= 0){
             this.ban();
