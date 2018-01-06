@@ -9,7 +9,7 @@ public class DayCard extends Card {
     }
 
     @Override
-    public void extend(CardOption o) {
+    void extend(CardOption o) {
         this.days += Integer.parseInt(o.toString());
         this.unban();
     }

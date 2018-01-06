@@ -7,7 +7,7 @@ public class WeekendCardDecorator extends Card {
         this.card = card;
     }
 
-    public void extend(CardOption o){
+    void extend(CardOption o){
         this.card.extend(o);
     }
 

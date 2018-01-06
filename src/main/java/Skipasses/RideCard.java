@@ -16,7 +16,7 @@ public class RideCard extends Card {
         return true;
     }
 
-    public void extend(CardOption rides){
+    void extend(CardOption rides){
         this.rides += Integer.parseInt(rides.toString());
         this.unban();
     }
