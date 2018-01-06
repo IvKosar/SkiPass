@@ -4,6 +4,7 @@ public class RideCard extends Card {
 
     private int rides = 0;
     RideCard(int id, RideCardOption opt){
+        this.id = id;
         extend(opt);
     }
 
@@ -27,5 +28,13 @@ public class RideCard extends Card {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public String toString() {
+        String info = this.getClass().getName();
+        info += "|ID="+Integer.toString(this.id);
+        info += "|rides left:"+Integer.toString(this.rides);
+        return info;
     }
 }

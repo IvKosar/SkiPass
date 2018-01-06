@@ -22,4 +22,9 @@ public class WeekendCardDecorator extends Card {
         }
         return false;
     }
+
+    @Override
+    public String toString() {
+        return "Weekend "+this.card.toString();
+    }
 }

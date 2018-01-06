@@ -22,4 +22,9 @@ public class WeekdayCardDecorator extends Card {
         }
         return false;
     }
+
+    @Override
+    public String toString() {
+        return "Weekday "+this.card.toString();
+    }
 }
