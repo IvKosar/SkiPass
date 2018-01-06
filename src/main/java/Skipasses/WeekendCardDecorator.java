@@ -17,14 +17,16 @@ public class WeekendCardDecorator extends Card {
     }
 
     Boolean useCard(){
-        if(this.is_valid()) {
-            return this.card.useCard();
-        }
-        return false;
+//        if(this.is_valid()) {
+//            return this.card.useCard();
+//        }
+//        return false;
+        return this.is_valid() && this.card.useCard();
     }
 
     @Override
     public String toString() {
         return "Weekend "+this.card.toString();
     }
+
 }

@@ -24,7 +24,7 @@ public class DayCard extends Card {
             this.days -= 1;
         }
 
-        if(this.days <= 0){
+        if(this.days < 0){
             this.ban();
             return false;
         }
@@ -65,4 +65,5 @@ public class DayCard extends Card {
         info += "|days left:"+Integer.toString(this.days);
         return info;
     }
+
 }

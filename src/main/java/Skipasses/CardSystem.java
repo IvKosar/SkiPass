@@ -41,4 +41,8 @@ public class CardSystem {
         this.add_card(result);
         return result;
     }
+
+    public void extend(Card card, CardOption o){
+        card.extend(o);
+    }
 }
