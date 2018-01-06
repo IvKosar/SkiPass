@@ -12,7 +12,7 @@ public class Main {
 
         Card c1 = cs.getNewCard(WeekdayDayCardOption.FIVE);
 
-        /* RideCard test
+        ///* RideCard test
         Card c2 = cs.getNewCard(RideCardOption.TEN,"weekday");
 
 
@@ -21,20 +21,11 @@ public class Main {
         }
 
 
-        c2.extend(RideCardOption.TEN);
-        System.out.println("Extended");
-
-        for(int i=0;i<11;i++) {
-            System.out.println(t1.useCard(c2));
-        }
-        */
+        //*/
 
 //        Card weekTest1 = cs.getNewCard(WeekendDayCardOption.ONE);
 //        System.out.println(t1.useCard(weekTest1));
 //        System.out.println(Timer.futureDate(5));
 
-
-        Card test1 = cs.getNewCard(WeekdayDayCardOption.TWO);
-        System.out.println(test1);
     }
 }

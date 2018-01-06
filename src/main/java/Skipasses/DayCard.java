@@ -4,7 +4,7 @@ public class DayCard extends Card {
 
     private int days;
     private String last_check;
-    private String deadline;
+//    private String deadline;
 
     DayCard(int id, CardOption opt){
         this.id = id;
@@ -28,9 +28,7 @@ public class DayCard extends Card {
             this.ban();
             return false;
         }
-
-
-
+        /*
         if(Integer.parseInt(dat.substring(0,4)) > Integer.parseInt(this.deadline.substring(0,4))){
             this.ban();
             return false;
@@ -43,6 +41,7 @@ public class DayCard extends Card {
             this.ban();
             return false;
         }
+        */
         return true;
     }
 
@@ -50,7 +49,7 @@ public class DayCard extends Card {
     void extend(CardOption o) {
         int plusDays = Integer.parseInt(o.toString());
         this.days += plusDays;
-        this.deadline = Timer.futureDate(plusDays-1);
+//        this.deadline = Timer.futureDate(plusDays-1);
         this.unban();
     }
 
@@ -58,20 +57,12 @@ public class DayCard extends Card {
         return this.is_valid();
     }
 
-    int daysLeft(){
-        if(!this.is_valid()){
-            return 0;
-        }
-        return Timer.daysBetween(this.deadline);
-
-    }
-
     @Override
     public String toString() {
         String info = this.getClass().getName();
         info += "|ID="+Integer.toString(this.id);
 //        info += "|rides left:"+Integer.toString(this.);
-        info += "|days left:"+Integer.toString(this.daysLeft());
+        info += "|days left:"+Integer.toString(this.days);
         return info;
     }
 }
